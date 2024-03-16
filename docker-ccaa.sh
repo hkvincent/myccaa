@@ -89,7 +89,7 @@ function setting(){
 	osip=$(curl ipv4.ip.sb)
 	
 	#执行替换操作
-	downpath='/data/ccaaDown'
+	downpath='/data/vdisk'
 	mkdir -p ${downpath}
 	sed -i "s%dir=%dir=${downpath}%g" /etc/ccaa/aria2.conf
 	sed -ir "s/rpc-secret=.*/rpc-secret=$PASS/g" /etc/ccaa/aria2.conf
